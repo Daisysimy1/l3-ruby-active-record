@@ -2,8 +2,16 @@ require "pry"
 require "active_record"
 
 # TODO: CONNECT TO THE DATABASE
+ActiveRecord::Base.establish_connection(
+    adapter: "sqlite3",
+    database: "db/school-dev.sqlite3"
+)
 
 # TODO: CREATE TABLE
+class Course < ActiveRecord::Base
+end
+
+binding.pry
 
 # TODO: Create class that associates with the db table
 
